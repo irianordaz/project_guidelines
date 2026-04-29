@@ -1,0 +1,253 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+    "project_panel": {
+        "dock": "right",
+    },
+    "outline_panel": {
+        "dock": "right",
+    },
+    "collaboration_panel": {
+        "dock": "right",
+    },
+    "git_panel": {
+        "dock": "right",
+        "tree_view": true,
+    },
+    "terminal": {
+        "copy_on_select": true,
+    },
+    "telemetry": {
+        "diagnostics": false,
+        "metrics": false,
+    },
+    "icon_theme": {
+        "mode": "light",
+        "light": "Material Icon Theme",
+        "dark": "Material Icon Theme",
+    },
+    "session": {
+        "trust_all_worktrees": true,
+    },
+    "vim_mode": true,
+    "theme": {
+        "mode": "dark",
+        "light": "Catppuccin Latte - No Italics",
+        "dark": "Tokyo Night Storm",
+    },
+    "wrap_guides": [80],
+    "buffer_font_fallbacks": ["Segoe UI"],
+    "ui_font_family": "Fira Code",
+    "ui_font_size": 16,
+    "buffer_font_family": "Fira Code",
+    "buffer_font_size": 16,
+    "base_keymap": "VSCode",
+    "autosave": {
+        "after_delay": {
+            "milliseconds": 5000,
+        },
+    },
+    "tab_size": 4,
+    "hard_tabs": false,
+    "inlay_hints": {
+        "show_value_hints": true,
+    },
+    "gutter": {
+        "folds": false,
+        "runnables": false, // Hides run/debug icons
+        "line_numbers": true,
+    },
+    "language_models": {
+        // "ollama": {
+        //     "context_window": 65000,
+        // },
+        "openai_compatible": {
+            "Together.ai": {
+                "api_url": "https://api.together.xyz/v1",
+                "available_models": [
+                    {
+                        "name": "Qwen/Qwen3.5-397B-A17B",
+                        "max_tokens": 262144,
+                        "max_output_tokens": 32768,
+                        "max_completion_tokens": 50000,
+                        "capabilities": {
+                            "tools": true,
+                            "images": false,
+                            "parallel_tool_calls": false,
+                            "prompt_cache_key": false,
+                            "chat_completions": true,
+                        },
+                    },
+                    {
+                        "name": "moonshotai/Kimi-K2.5",
+                        "max_tokens": 262144,
+                        "max_output_tokens": 32768,
+                        "max_completion_tokens": 60000,
+                        "capabilities": {
+                            "tools": true,
+                            "images": false,
+                            "parallel_tool_calls": true,
+                            "prompt_cache_key": false,
+                            "chat_completions": true,
+                        },
+                    },
+                ],
+            },
+            "MLX-LM": {
+                "api_url": "http://localhost:8080",
+                "available_models": [
+                    {
+                        "name": "mlx-community/Qwen3.6-35B-A3B-nvfp4",
+                        "display_name": "Qwen3.6-35B-A3B (MLX/NVFP4/Local)",
+                        "max_tokens": 128000,
+                    },
+                    {
+                        "name": "sabeshbesh/qwen3.6-27b-mlx-4bit",
+                        "display_name": "Qwen3.6-27B (MLX/Local)",
+                        "max_tokens": 128000,
+                    },
+                ],
+            },
+        },
+    },
+    "context_servers": {
+        "mcp-server-context7": {
+            "enabled": true,
+            "remote": false,
+            "settings": {
+                "context7_api_key": "",
+            },
+        },
+    },
+    "agent": {
+        "dock": "left",
+        "commit_message_model": {
+            "provider": "zed.dev",
+            "model": "zeta",
+            // "provider": "openai",
+            // "model": "mlx-community/Qwen3.6-35B-A3B-nvfp4",
+        },
+        "inline_assistant_model": {
+            "provider": "zed.dev",
+            "model": "zeta",
+            // "provider": "openai",
+            // "model": "mlx-community/Qwen3.6-35B-A3B-nvfp4",
+            "enable_thinking": false,
+        },
+        "profiles": {
+            "write": {
+                "name": "Write",
+                "tools": {},
+                "enable_all_context_servers": false,
+                "context_servers": {},
+            },
+        },
+        "tool_permissions": {
+            "tools": {
+                "create_directory": {
+                    "default": "allow",
+                },
+                "edit_file": {
+                    "default": "allow",
+                },
+                "terminal": {
+                    "default": "allow",
+                    "always_allow": [
+                        {
+                            "pattern": "^pixi\\s+run(\\s|$)",
+                        },
+                        {
+                            "pattern": "^tail\\b",
+                        },
+                        {
+                            "pattern": "^grep\\b",
+                        },
+                        {
+                            "pattern": "^pixi\\s+init(\\s|$)",
+                        },
+                        {
+                            "pattern": "^pixi\\s+add(\\s|$)",
+                        },
+                        {
+                            "pattern": "^pixi\\s+list(\\s|$)",
+                        },
+                    ],
+                },
+            },
+        },
+        "default_model": {
+            "provider": "MLX-LM",
+            "model": "mlx-community/Qwen3.6-35B-A3B-nvfp4",
+            "enable_thinking": false,
+        },
+        "favorite_models": [
+            {
+                "provider": "MLX-LM",
+                "model": "mlx-community/Qwen3.6-35B-A3B-nvfp4",
+                "enable_thinking": false,
+            },
+        ],
+        "model_parameters": [],
+    },
+    "agent_servers": {
+        "claude-acp": {
+            "type": "registry",
+        },
+        "kilo": {
+            "favorite_config_option_values": {
+                "model": [
+                    "mlx-lm/mlx-community/Qwen3.6-35B-A3B-nvfp4",
+                    "ollama/qwen3.5:35b-a3b-coding-nvfp4",
+                ],
+            },
+            "favorite_models": ["openai/qwen3.5:35b-a3b-coding-nvfp4"],
+            "type": "registry",
+        },
+        "opencode": {
+            "type": "registry",
+        },
+    },
+    "languages": {
+        "Python": {
+            "soft_wrap": "preferred_line_length",
+            "allow_rewrap": "in_comments",
+            "preferred_line_length": 80,
+            "inlay_hints": {
+                "enabled": false,
+            },
+            "language_servers": ["ruff", "pyright"],
+            "format_on_save": "on",
+            "code_actions_on_format": {
+                "source.fixAll.ruff": true,
+                "source.organizeImports.ruff": true,
+            },
+            "formatter": {
+                "language_server": {
+                    "name": "ruff",
+                },
+            },
+        },
+    },
+    "lsp": {
+        "ruff": {
+            "initialization_options": {
+                "settings": {
+                    "lineLength": 80,
+
+                    "lint": {
+                        "extendSelect": ["I", "W505"],
+                        "pycodestyle": {
+                            "maxDocLength": 72,
+                        },
+                    },
+                },
+            },
+        },
+    },
+}
