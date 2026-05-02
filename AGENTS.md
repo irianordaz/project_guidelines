@@ -56,6 +56,19 @@ reference tasks via `pixi run <task>` rather than raw commands.
   Favor explicit logic over dense one-liners. Verbose is better than obscure.
   Code is read far more often than it is written.
 
+## Docstrings
+- **Required:** All public modules, classes, and functions must have docstrings.
+  Private functions (prefixed with `_`) and simple `__init__` methods without
+  custom logic may omit them.
+- **Style:** Use the **Google** style for all docstrings.
+- **Conciseness:** Keep docstrings concise and purposeful. A module and class
+  docstring should be a single descriptive sentence. A function docstring should
+  include a short one-line summary, followed by `Args:`, `Returns:`, and `Raises:`
+  sections only when they add clarity.
+- **No redundancy:** Do not repeat information obvious from the function signature.
+  E.g., avoid documenting a parameter's type if it is already annotated.
+- **Line Length:** Keep all docstring lines under **80 characters**.
+
 ## Tooling & Formatting (Ruff)
 - **Linter/Formatter:** Use **Ruff** for everything (linting, formatting, and import sorting).
 - **Line Length:** Enforce a strict **80-character maximum** for both code and docstrings.
