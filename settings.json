@@ -7,6 +7,12 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+    "git": {
+        "blame": {
+            "show_avatar": true,
+        },
+        "disable_git": false,
+    },
     "project_panel": {
         "dock": "right",
     },
@@ -39,7 +45,7 @@
     "theme": {
         "mode": "dark",
         "light": "Catppuccin Latte - No Italics",
-        "dark": "Tokyo Night Storm",
+        "dark": "One Dark",
     },
     "wrap_guides": [80],
     "buffer_font_fallbacks": ["Segoe UI"],
@@ -55,6 +61,9 @@
     },
     "tab_size": 4,
     "hard_tabs": false,
+
+    "auto_indent_on_paste": true,
+
     "inlay_hints": {
         "show_value_hints": true,
     },
@@ -63,10 +72,24 @@
         "runnables": false, // Hides run/debug icons
         "line_numbers": true,
     },
-    "language_models": {
+
+    "edit_predictions": {
+        "provider": "zed",
+        // "provider": "ollama",
         // "ollama": {
-        //     "context_window": 65000,
+        //     "api_url": "http://localhost:11434/v1/completions",
+        //     "model": "qwen3.6:35b-a3b-coding-mxfp8",
+        //     "prompt_format": "infer",
+        //     "max_output_tokens": 64,
         // },
+        // "mode": "eager", // or "subtle"
+    },
+
+    "language_models": {
+        "ollama": {
+            "context_window": 128000,
+        },
+
         "openai_compatible": {
             "Together.ai": {
                 "api_url": "https://api.together.xyz/v1",
@@ -99,7 +122,8 @@
                     },
                 ],
             },
-            "MLX-LM": {
+
+            "mlx-lm": {
                 "api_url": "http://localhost:8080",
                 "available_models": [
                     {
@@ -114,8 +138,25 @@
                     },
                 ],
             },
+
+            "ollama": {
+                "api_url": "http://localhost:11434/v1",
+                "available_models": [
+                    {
+                        "name": "qwen3.6:35b-a3b-coding-mxfp8",
+                        "display_name": "Qwen3.6-35B-A3B (MLX/MXFP8/Local)",
+                        "max_tokens": 128000,
+                    },
+                    {
+                        "name": "qwen3.6:35b-a3b-coding-nvfp4",
+                        "display_name": "Qwen3.6-35B-A3B (MLX/NVFP4/Local)",
+                        "max_tokens": 128000,
+                    },
+                ],
+            },
         },
     },
+
     "context_servers": {
         "mcp-server-context7": {
             "enabled": true,
@@ -125,21 +166,29 @@
             },
         },
     },
+
     "agent": {
         "dock": "left",
+
         "commit_message_model": {
+            // "provider": "ollama",
+            // "model": "qwen3.6:35b-a3b-coding-mxfp8",
             "provider": "zed.dev",
             "model": "zeta",
             // "provider": "openai",
             // "model": "mlx-community/Qwen3.6-35B-A3B-nvfp4",
         },
+
         "inline_assistant_model": {
+            // "provider": "ollama",
+            // "model": "qwen3.6:35b-a3b-coding-mxfp8",
             "provider": "zed.dev",
             "model": "zeta",
             // "provider": "openai",
             // "model": "mlx-community/Qwen3.6-35B-A3B-nvfp4",
             "enable_thinking": false,
         },
+
         "profiles": {
             "write": {
                 "name": "Write",
@@ -148,6 +197,7 @@
                 "context_servers": {},
             },
         },
+
         "tool_permissions": {
             "tools": {
                 "create_directory": {
@@ -181,41 +231,69 @@
                 },
             },
         },
+
         "default_model": {
-            "provider": "MLX-LM",
-            "model": "mlx-community/Qwen3.6-35B-A3B-nvfp4",
-            "enable_thinking": false,
+            "provider": "ollama",
+            "model": "qwen3.6:35b-a3b-coding-mxfp8",
+            "enable_thinking": true,
         },
+
+        "inline_alternatives": [
+            {
+                "provider": "ollama",
+                "model": "qwen3.6:35b-a3b-coding-mxfp8",
+            },
+            {
+                "provider": "ollama",
+                "model": "qwen3.6:35b-a3b-coding-nvfp4",
+            },
+            {
+                "provider": "zed.dev",
+                "model": "gpt-4-mini",
+            },
+        ],
+
         "favorite_models": [
             {
-                "provider": "MLX-LM",
-                "model": "mlx-community/Qwen3.6-35B-A3B-nvfp4",
+                "provider": "ollama",
+                "model": "qwen3.6:35b-a3b-coding-mxfp8",
                 "enable_thinking": false,
             },
         ],
+
         "model_parameters": [],
     },
+
     "agent_servers": {
         "claude-acp": {
             "type": "registry",
         },
+
         "kilo": {
             "favorite_config_option_values": {
                 "model": [
-                    "mlx-lm/mlx-community/Qwen3.6-35B-A3B-nvfp4",
                     "ollama/qwen3.5:35b-a3b-coding-nvfp4",
+                    "ollama/qwen3.6:35b-a3b-coding-mxfp8",
                 ],
             },
-            "favorite_models": ["openai/qwen3.5:35b-a3b-coding-nvfp4"],
+            "favorite_models": ["ollama/qwen3.6:35b-a3b-coding-mxfp8"],
             "type": "registry",
         },
+
         "opencode": {
+            "favorite_config_option_values": {
+                "model": [
+                    "ollama/qwen3.6:35b-a3b-coding-mxfp8",
+                    "ollama/qwen3.6:35b-a3b-coding-nvfp4",
+                ],
+            },
             "type": "registry",
         },
     },
+
     "languages": {
         "Python": {
-            "soft_wrap": "preferred_line_length",
+            "soft_wrap": "prefer_line",
             "allow_rewrap": "in_comments",
             "preferred_line_length": 80,
             "inlay_hints": {
@@ -234,6 +312,8 @@
             },
         },
     },
+
+    "show_completions_on_input": false, // disables LSP completion in facor of AI edit predictions
     "lsp": {
         "ruff": {
             "initialization_options": {

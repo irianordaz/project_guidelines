@@ -18,4 +18,25 @@
         "context": "Editor && vim_mode == insert",
         "bindings": {},
     },
+    // {
+    //     "context": "Editor && mode == full",
+    //     "bindings": {
+    //         "ctrl-shift-enter": [
+    //             "assistant::InlineAssist",
+    //             { "prompt": "Build a snake game" },
+    //         ],
+    //     },
+    // },
+    {
+        "context": "Editor && edit_prediction",
+        "bindings": {
+            "tab": "editor::AcceptEditPrediction",
+        },
+    },
+    // {
+    //     "context": "Editor && edit_prediction",
+    //     "bindings": {
+    //         "tab": "editor::AcceptEditPrediction",
+    //     },
+    // },
 ]
