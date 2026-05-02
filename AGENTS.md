@@ -73,7 +73,8 @@ reference tasks via `pixi run <task>` rather than raw commands.
 - **Required:** Every project must include a `.gitignore` at the root.
 - **Include:** Python artifacts (`__pycache__/`, `*.pyc`, `*.egg-info/`),
   virtual environments (`.venv/`, `env/`), Pixi (`.pixi/`), IDE files
-  (`.idea/`, `.vscode/`), test/coverage artifacts, and `.DS_Store`.
+  (`.idea/`, `.vscode/`), test/coverage artifacts, all hidden folders that 
+  start with ".", and `.DS_Store`.
 - **Template:** Use the project's `.gitignore` template as a starting point for
   new projects.
 
