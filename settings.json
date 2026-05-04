@@ -330,4 +330,19 @@
             },
         },
     },
+
+  "file_scan_exclusions": [
+    "**/.git",
+    "**/.env",
+    "**/*.out",
+    "**/*_out",
+    "**/.pixi",
+    "**/.ruff_cache",
+    "**/n2.html",
+    "**/*.log",
+    "**/*.aux",
+    "**/*.tikz",
+    "**/*.egg-info",
+  ],
+    
 }
