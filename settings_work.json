@@ -1,0 +1,214 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "ui_font_family": "Consolas",
+  "ui_font_size": 16,
+  "buffer_font_size": 14,
+  "buffer_font_fallbacks": ["Consolas", "Courier New"],
+  "buffer_font_family": "Cascadia Code",
+  "restore_on_startup": "last_session",
+  "cli_default_open_behavior": "existing_window",
+  "base_keymap": "VSCode",
+  "vim_mode": true,
+  "wrap_guides": [80],
+  "bottom_dock_layout": "contained",
+
+  "status_bar": {
+    "show_active_file": true,
+  },
+
+  "project_panel": {
+    "dock": "left",
+  },
+
+  "outline_panel": {
+    "dock": "right",
+  },
+
+  "collaboration_panel": {
+    "dock": "right",
+  },
+
+  "git_panel": {
+    "dock": "left",
+  },
+
+  "languages": {
+    "Python": {
+      "semantic_tokens": "off", // "full" was disabling syntax highlighting
+      "language_servers": ["basedpyright", "!pyright", "!ty"],
+      "format_on_save": "on",
+      "code_actions_on_format": {
+        "source.organizeImports.ruff": true,
+        "source.fixAll.ruff": true,
+      },
+      "formatter": {
+        "language_server": {
+          "name": "ruff",
+        },
+      },
+    },
+  },
+
+  "lsp": {
+    "ty": {
+      "settings": {},
+    },
+    "basedpyright": {
+      "settings": {
+        "python": {
+          "pythonPath": ".pixi/envs/default/python.exe",
+          "analysis": {
+            "typeCheckingMode": "basic",
+            "autoImportCompletions": true,
+            "diagnosticMode": "workspace", // or "openFilesOnly"
+            // "extraPaths": ["../ConceptsLibrary"], // not needed if not editable
+          },
+        },
+        "basedpyright": {
+          "disableOrganizeImports": true, // Ruff handles this
+        },
+      },
+    },
+  },
+
+  "inlay_hints": {
+    "show_value_hints": false,
+  },
+
+  "session": {
+    "trust_all_worktrees": true,
+  },
+
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false,
+  },
+
+  "autosave": {
+    "after_delay": {
+      "milliseconds": 5000,
+    },
+  },
+
+  "title_bar": {
+    "show_branch_status_icon": true,
+    "show_menus": false,
+    "show_branch_name": true,
+    "show_project_items": true,
+    "show_onboarding_banner": false,
+    "show_user_picture": false,
+    "show_sign_in": false,
+    "show_user_menu": true,
+  },
+
+  "minimap": {
+    "show": "auto", // When to show (auto, always, never)
+    "display_in": "active_editor", // Where to show (active_editor, all_editor)
+    "thumb": "always", // When to show thumb (always, hover)
+    "thumb_border": "left_open", // Thumb border (left_open, right_open, full, none)
+    "max_width_columns": 80, // Maximum width of minimap
+    "current_line_highlight": null, // Highlight current line (null, line, gutter)
+  },
+
+  "theme": {
+    "mode": "dark",
+    "light": "Catppuccin Latte",
+    "dark": "One Dark",
+  },
+
+  "icon_theme": {
+    "mode": "light",
+    "light": "Material Icon Theme",
+    "dark": "Material Icon Theme",
+  },
+
+  "terminal": {
+    // "dock": "right",
+    "font_size": 14,
+    "copy_on_select": true,
+    "shell": {
+      "with_arguments": {
+        "program": "cmd.exe",
+        "args": [
+          "/k",
+          "c:\\npss.emi.14.0.2\\scripts\\nt\\emi_npss_3.2.nt.release.vc14.64.bat",
+        ],
+      },
+    },
+  },
+
+  "agent": {
+    "sidebar_side": "right",
+    "dock": "right",
+    "default_model": {
+      "provider": "openai",
+      "model": "claude-sonnet-4.6-thinking",
+      "enable_thinking": true,
+    },
+    "favorite_models": [],
+    "model_parameters": [],
+  },
+
+  "language_models": {
+    "openai": {
+      "api_url": "https://XXX",
+      "available_models": [
+        {
+          "name": "claude-opus-4.6-thinking",
+          "display_name": "Claude Opus 4.6",
+          "max_tokens": 1000000,
+          "max_output_tokens": 128000,
+        },
+        {
+          "name": "claude-sonnet-4.6-thinking",
+          "display_name": "Claude Sonnet 4.6",
+          "max_tokens": 1000000,
+          "max_output_tokens": 64000,
+        },
+        {
+          "name": "claude-haiku-4.5",
+          "display_name": "Claude Haiku 4.5",
+          "max_tokens": 200000,
+          "max_output_tokens": 64000,
+        },
+        {
+          "name": "gpt-5.2",
+          "display_name": "ChatGPT gpt-5.2",
+          "max_tokens": 400000,
+          "max_output_tokens": 128000,
+        },
+      ],
+    },
+  },
+
+  "edit_predictions": {
+    "provider": "copilot",
+    "open_ai_compatible_api": {
+      "api_url": "https://XXX/v1/completions",
+      "model": "https://XXX",
+      "prompt_format": "infer",
+    },
+  },
+
+  "file_scan_exclusions": [
+    "**/.git",
+    "**/.env",
+    "**/*.out",
+    "**/*_out",
+    "**/.pixi",
+    "**/.ruff_cache",
+    "**/n2.html",
+    "**/*.log",
+    "**/*.aux",
+    "**/*.tikz",
+    "**/*.egg-info",
+    "**/*_out",
+  ],
+}
