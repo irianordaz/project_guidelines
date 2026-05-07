@@ -19,6 +19,13 @@
   "wrap_guides": [80],
   "bottom_dock_layout": "contained",
 
+  "toolbar": {
+    "code_actions": false,
+    "breadcrumbs": true,
+    "quick_actions": true,
+    "selections_menu": true,
+  },
+
   "status_bar": {
     "show_active_file": true,
   },
@@ -98,12 +105,13 @@
   },
 
   "title_bar": {
+    "button_layout": "platform_default",
     "show_branch_status_icon": true,
     "show_menus": false,
     "show_branch_name": true,
     "show_project_items": true,
     "show_onboarding_banner": false,
-    "show_user_picture": false,
+    "show_user_picture": true,
     "show_sign_in": false,
     "show_user_menu": true,
   },
@@ -158,7 +166,7 @@
 
   "language_models": {
     "openai": {
-      "api_url": "https://XXX",
+      "api_url": "https://xxxx",
       "available_models": [
         {
           "name": "claude-opus-4.6-thinking",
@@ -191,8 +199,8 @@
   "edit_predictions": {
     "provider": "copilot",
     "open_ai_compatible_api": {
-      "api_url": "https://XXX/v1/completions",
-      "model": "https://XXX",
+      "api_url": "https://xxxx/v1/completions",
+      "model": "https://xxxx",
       "prompt_format": "infer",
     },
   },
