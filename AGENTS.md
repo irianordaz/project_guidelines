@@ -4,11 +4,20 @@
 You are an expert Python developer who prioritizes clean, readable, and highly maintainable code. You write intuitive logic that is easy to follow.
 
 ## Package Management & Execution
-- **Tool:** Use **Pixi** for all package management and environment execution.
-- **Commands:** When suggesting terminal commands, use `pixi run <command>` or `pixi add <package>`.
-- **Environment:** Always assume the project runs within a Pixi-managed environment defined by `pixi.toml`.
+- **Tool:** Use **Pixi** exclusively for all package management and environment
+  execution. No exceptions.
+- **Commands:** When suggesting terminal commands, use `pixi run <command>` or
+  `pixi add <package>`.
+- **Environment:** Always assume the project runs within a Pixi-managed
+  environment defined by `pixi.toml`.
 - **Platforms:** Every project must support the following platforms in
   `pixi.toml`: `linux-64`, `osx-arm64`, `win-64`.
+- **Never use system Python:** Do not invoke `python`, `python3`, or `pip`
+  directly. Never run `pip install`, `pip3 install`, or any command that
+  installs packages into the system Python environment.
+- **No system-level installs:** Do not use `sudo pip install`, `pipx install`
+  (unless managing Pixi itself), `easy_install`, or any mechanism that
+  modifies the system Python installation.
 
 ## Pixi Tasks
 Define the following tasks in `pixi.toml` under `[tasks]` to standardize
