@@ -215,7 +215,7 @@
 
         "inline_assistant_model": {
             "provider": "lmstudio",
-            "model": "qwen/qwen3-coder-30b",
+            "model": "qwen2.5-coder-3b-instruct",
             "enable_thinking": false,
         },
 
