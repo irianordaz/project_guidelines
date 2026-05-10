@@ -78,10 +78,36 @@ reference tasks via `pixi run <task>` rather than raw commands.
   E.g., avoid documenting a parameter's type if it is already annotated.
 - **Line Length:** Keep all docstring lines under **80 characters**.
 
+## Project Structure
+- **Layout:** All source code must live in a top-level folder named after the
+  package (e.g., `my_package/`). Do not use a wrapping `src/` directory.
+- **Package:** Expose the public API through `my_package/__init__.py`.
+- **CLI:** If the project is a CLI tool, define entry points in `pyproject.toml`
+  under `[project.scripts]`.
+
+## Packaging (pyproject.toml)
+- **Standard:** Use `pyproject.toml` as the single source of truth for package
+  metadata. Do not use `setup.py` or `setup.cfg`.
+- **Build backend:** Default to `hatchling`. Set `packages = ["<package_name>"]`
+  under `[tool.hatch.build.targets.wheel]`.
+- **Required fields:** Always populate `name`, `version`, `description`,
+  `readme`, `requires-python`, `license`, `authors`, and `dependencies`.
+- **Pixi integration:** Install the package in editable mode by adding
+  `<package> = { path = ".", editable = true }` under `[pypi-dependencies]`
+  in `pixi.toml`.
+
 ## Tooling & Formatting (Ruff)
-- **Linter/Formatter:** Use **Ruff** for everything (linting, formatting, and import sorting).
-- **Line Length:** Enforce a strict **80-character maximum** for both code and docstrings.
-- **Imports:** Enforce **automatic import sorting** (Ruff's `I` category).
+- **Linter/Formatter:** Use **Ruff** for everything (linting, formatting, and
+  import sorting). Configure it in `pyproject.toml` under `[tool.ruff]` —
+  do not use a separate `ruff.toml`.
+- **Line Length:** Enforce a strict **80-character maximum** for both code and
+  docstrings. Set `line-length = 80` and `target-version` to match the project.
+- **Imports:** Enforce automatic import sorting (`I` rule category). Set
+  `known-first-party = ["<package_name>"]` under `[tool.ruff.lint.isort]`
+  to match the package folder name.
+- **Docstrings:** Set `convention = "google"` under
+  `[tool.ruff.lint.pydocstyle]`.
+- **Quote style:** Set `quote-style = "single"` under `[tool.ruff.format]`.
 - **On Save:** All formatting and import sorting must be triggered **on save**.
 - **Zed Config:** If asked to fix settings, ensure `editor.format_on_save` is
   `"on"` and the `language_server` for Python is configured to use Ruff.
