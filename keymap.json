@@ -39,4 +39,11 @@
     //         "tab": "editor::AcceptEditPrediction",
     //     },
     // },
+
+    // {
+    //     "context": "Workspace",
+    //     "bindings": {
+    //         "ctrl-shift-g": "git_panel::ToggleFocus"
+    //     }
+    // }
 ]

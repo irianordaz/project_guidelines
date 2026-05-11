@@ -7,6 +7,9 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+    "debugger": {
+        "dock": "left"
+    },
     "cli_default_open_behavior": "new_window",
     "git": {
         "blame": {
@@ -15,17 +18,17 @@
         "disable_git": false,
     },
     "project_panel": {
-        "dock": "right",
+        "dock": "left",
         "hide_gitignore": true,
     },
     "outline_panel": {
         "dock": "right",
     },
     "collaboration_panel": {
-        "dock": "right",
+        "dock": "left",
     },
     "git_panel": {
-        "dock": "right",
+        "dock": "left",
         "tree_view": true,
     },
     "terminal": {
@@ -125,19 +128,19 @@
                 "available_models": [
                     {
                         "name": "qwen3.6:27b",
-                        "display_name": "Qwen 3.6 27B (Local)",
+                        "display_name": "Qwen 3.6 27B",
                         "max_tokens": 32768,
                         "max_output_tokens": 32768,
                     },
                     {
                         "name": "gemma4:26b",
-                        "display_name": "Gemma4 26B (Local)",
+                        "display_name": "Gemma4 26B",
                         "max_tokens": 32768,
                         "max_output_tokens": 32768,
                     },
                     {
                         "name": "gemma4:31b",
-                        "display_name": "Gemma4 31B (Local)",
+                        "display_name": "Gemma4 31B",
                         "max_tokens": 32768,
                         "max_output_tokens": 32768,
                     },
@@ -149,91 +152,91 @@
                 "available_models": [
                     {
                         "name": "mlx-community/qwen3.6-35b-a3b",
-                        "display_name": "MLX Qwen 3.6 35B-A3B (Local)",
+                        "display_name": "MLX Qwen 3.6 35B-A3B",
                         "max_tokens": 32768,
                         "max_output_tokens": 16384,
                     },
                     {
                         "name": "mlx-community/qwen3.6-27b",
-                        "display_name": "MLX Qwen 3.6 27B (Local)",
+                        "display_name": "MLX Qwen 3.6 27B",
                         "max_tokens": 32768,
                         "max_output_tokens": 16384,
                     },
                     {
                         "name": "qwen/qwen3-coder-30b",
-                        "display_name": "Qwen 3 Coder 30B (Local)",
+                        "display_name": "Qwen 3 Coder 30B",
                         "max_tokens": 32768,
                         "max_output_tokens": 16384,
                     },
                     {
                         "name": "qwen/qwen3.6-35b-a3b",
-                        "display_name": "Qwen 3.6 35B-A3B (Local)",
+                        "display_name": "Qwen 3.6 35B-A3B",
                         "max_tokens": 32768,
                         "max_output_tokens": 16384,
                     },
                     {
                         "name": "qwen/qwen3.6-27b",
-                        "display_name": "Qwen3.6 27B (Local)",
+                        "display_name": "Qwen3.6 27B",
                         "max_tokens": 32768,
                         "max_output_tokens": 16384,
                     },
                     {
                         "name": "google/gemma-4-31b",
-                        "display_name": "Gemma4 31B (Local)",
+                        "display_name": "Gemma4 31B",
                         "max_tokens": 32768,
                         "max_output_tokens": 16384,
                     },
                     {
                         "name": "llama-3.2-1b-instruct",
-                        "display_name": "Llama 3.2 1B Instruct (Local)",
+                        "display_name": "Llama 3.2 1B Instruct",
                         "max_tokens": 2048,
                         "max_output_tokens": 2048,
                     },
                     {
                         "name": "qwen2.5-0.5b-instruct-mlx",
-                        "display_name": "Qwen 2.5 0.5B Instruct MLX (Local)",
+                        "display_name": "Qwen 2.5 0.5B Instruct MLX",
                         "max_tokens": 2048,
                         "max_output_tokens": 2048,
                     },
                     {
                         "name": "qwen2.5-coder-0.5b-instruct",
-                        "display_name": "Qwen 2.5 Coder 0.5B Instruct (Local)",
+                        "display_name": "Qwen 2.5 Coder 0.5B Instruct",
                         "max_tokens": 2048,
                         "max_output_tokens": 2048,
                     },
                     {
                         "name": "qwen2.5-coder-1.5b-instruct",
-                        "display_name": "Qwen 2.5 Coder 1.5B Instruct (Local)",
+                        "display_name": "Qwen 2.5 Coder 1.5B Instruct",
                         "max_tokens": 2048,
                         "max_output_tokens": 2048,
                     },
                     {
                         "name": "qwen2.5-coder-1.5b-instruct-mlx",
-                        "display_name": "Qwen 2.5 Coder 1.5B Instruct MLX (Local)",
+                        "display_name": "Qwen 2.5 Coder 1.5B Instruct MLX",
                         "max_tokens": 2048,
                         "max_output_tokens": 2048,
                     },
                     {
                         "name": "qwen2.5-coder-3b-instruct",
-                        "display_name": "Qwen 2.5 Coder 3B Instruct (Local)",
+                        "display_name": "Qwen 2.5 Coder 3B Instruct",
                         "max_tokens": 2048,
                         "max_output_tokens": 2048,
                     },
                     {
                         "name": "qwen2.5-coder-3b-instruct-mlx",
-                        "display_name": "Qwen 2.5 Coder 3B Instruct MLX (Local)",
+                        "display_name": "Qwen 2.5 Coder 3B Instruct MLX",
                         "max_tokens": 2048,
                         "max_output_tokens": 2048,
                     },
                     {
                         "name": "qwen3.5-0.8b",
-                        "display_name": "Qwen 3.5 0.8B (Local)",
+                        "display_name": "Qwen 3.5 0.8B",
                         "max_tokens": 2048,
                         "max_output_tokens": 2048,
                     },
                     {
                         "name": "qwen3.5-0.8b-mlx",
-                        "display_name": "Qwen 3.5 0.8B MLX (Local)",
+                        "display_name": "Qwen 3.5 0.8B MLX",
                         "max_tokens": 2048,
                         "max_output_tokens": 2048,
                     },
@@ -253,7 +256,8 @@
     },
 
     "agent": {
-        "dock": "left",
+        "sidebar_side": "right",
+        "dock": "right",
 
         "commit_message_model": {
             "provider": "openai_compatible/LMStudio",
@@ -312,18 +316,14 @@
 
         "default_model": {
             "provider": "lmstudio",
-            "model": "mlx-community/qwen3.6-35b-a3b",
+            "model": "qwen/qwen3.6-35b-a3b",
             "enable_thinking": true,
         },
 
         "inline_alternatives": [
             {
-                "provider": "ollama",
-                "model": "qwen3.6:35b-a3b-coding-mxfp8",
-            },
-            {
-                "provider": "ollama",
-                "model": "qwen3.6:35b-a3b-coding-nvfp4",
+                "provider": "lmstudio",
+                "model": "qwen2.5-coder-0.5b-instruct",
             },
             {
                 "provider": "zed.dev",
@@ -333,8 +333,8 @@
 
         "favorite_models": [
             {
-                "provider": "ollama",
-                "model": "qwen3.6:35b-a3b-coding-mxfp8",
+                "provider": "lmstudio",
+                "model": "qwen/qwen3.6-35b-a3b",
                 "enable_thinking": false,
             },
         ],
