@@ -145,6 +145,7 @@ reference tasks via `pixi run <task>` rather than raw commands.
 2. **User Chooses:** Outline the trade-offs of each option (pros, cons,
    complexity) and let the user pick the direction. Do not proceed
    implementation until the user confirms.
-3. **Be Concise:** Don't explain standard Python features.
-4. **Refactor:** If you see "clever" code that is hard to read, refactor it to be **simple and intuitive**.
-5. **Check Constraints:** Before outputting code, verify that no line exceeds 80 characters.
+3. **Be Concise:** Enforce concise, no-filler outputs in system prompts to minimize
+   response length and don't explain standard Python features.
+5. **Refactor:** If you see "clever" code that is hard to read, refactor it to be **simple and intuitive**.
+6. **Check Constraints:** Before outputting code, verify that no line exceeds 80 characters.
