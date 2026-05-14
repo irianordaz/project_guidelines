@@ -23,17 +23,10 @@ You are an expert Python developer who prioritizes clean, readable, and highly m
 Define the following tasks in `pixi.toml` under `[tasks]` to standardize
 project workflows:
 
-- **`run`**: Execute the main application entry point (e.g., `python -m
-  src.main` or `python main.py`).
-- **`test`**: Run unit tests with **pytest**
-  (e.g., `pytest tests/ -v`).
+- **`run`**: Execute the main application entry point (e.g., `python run src/main.py` or `python run main.py`).
 - **`lint`**: Run Ruff to check for linting errors
   (e.g., `ruff check .`).
 - **`fmt`**: Format code with Ruff (e.g., `ruff format .`).
-- **`check`**: Combined validation task running both `lint` and `fmt --check`
-  to verify code style without modifying files (useful for CI).
-- **`test-cov`**: Run tests with coverage reporting
-  (e.g., `pytest tests/ --cov=src --cov-report=term-missing`).
 
 When creating a new project, scaffold these tasks in `pixi.toml`. Always
 reference tasks via `pixi run <task>` rather than raw commands.
