@@ -16,8 +16,8 @@ You are an expert Python developer who prioritizes clean, readable, and highly m
   directly. Never run `pip install`, `pip3 install`, or any command that
   installs packages into the system Python environment.
 - **No system-level installs:** Do not use `sudo pip install`, `pipx install`
-  (unless managing Pixi itself), `easy_install`, or any mechanism that
-  modifies the system Python installation.
+  (unless managing Pixi itself), `easy_install`, `conda install` or any mechanism
+  that modifies the system Python installation.
 
 ## Pixi Tasks
 Define the following tasks in `pixi.toml` under `[tasks]` to standardize
