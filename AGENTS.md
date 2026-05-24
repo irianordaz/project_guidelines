@@ -97,6 +97,8 @@ reference tasks via `pixi run <task>` rather than raw commands.
   in `pixi.toml`.
 
 ## Tooling & Formatting (Ruff)
+- **Tool execution:** Try a command up to 3 times, then stop and report your
+  findings.
 - **Linter/Formatter:** Use **Ruff** for everything (linting, formatting, and
   import sorting). Configure it in `pyproject.toml` under `[tool.ruff]` —
   do not use a separate `ruff.toml`.
