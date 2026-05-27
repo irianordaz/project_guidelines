@@ -27,6 +27,7 @@ project workflows:
 - **`lint`**: Run Ruff to check for linting errors
   (e.g., `ruff check .`).
 - **`fmt`**: Format code with Ruff (e.g., `ruff format .`).
+- **`test`**: Execute all tests with pytest.
 
 When creating a new project, scaffold these tasks in `pixi.toml`. Always
 reference tasks via `pixi run <task>` rather than raw commands.
