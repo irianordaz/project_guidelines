@@ -62,7 +62,7 @@ reference tasks via `pixi run <task>` rather than raw commands.
 - **Required:** All public modules, classes, and functions must have docstrings.
   Private functions (prefixed with `_`) and simple `__init__` methods without
   custom logic may omit them.
-- **Style:** Use the **Google** style for all docstrings.
+- **Style:** Use the **Google** style for all docstrings using American English.
 - **Conciseness:** Keep docstrings concise and purposeful. A module and class
   docstring should be a single descriptive sentence. A function docstring should
   include a short one-line summary, followed by `Args:`, `Returns:`, and `Raises:`
