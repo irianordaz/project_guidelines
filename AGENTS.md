@@ -27,6 +27,7 @@ project workflows:
 - **`lint`**: Run Ruff to check for linting errors
   (e.g., `ruff check .`).
 - **`fmt`**: Format code with Ruff (e.g., `ruff format .`).
+- **`test`**: Execute all tests with pytest.
 
 When creating a new project, scaffold these tasks in `pixi.toml`. Always
 reference tasks via `pixi run <task>` rather than raw commands.
@@ -63,6 +64,8 @@ reference tasks via `pixi run <task>` rather than raw commands.
   Private functions (prefixed with `_`) and simple `__init__` methods without
   custom logic may omit them.
 - **Style:** Use the **Google** style for all docstrings using American English.
+  Add succint docstrings and comments to all code and input files
+- **Style:** Use the **Google** style for all docstrings.
 - **Conciseness:** Keep docstrings concise and purposeful. A module and class
   docstring should be a single descriptive sentence. A function docstring should
   include a short one-line summary, followed by `Args:`, `Returns:`, and `Raises:`
